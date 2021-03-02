@@ -240,7 +240,7 @@ given population vector and stationary standard.</p>
            <span class='va'>AgeInt_fit</span>,
            <span class='va'>nLx</span>,
            <span class='va'>Age_nLx</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 0.03613687</div><div class='input'>
+</div><div class='output co'>#&gt; [1] 0.03690145</div><div class='input'>
 <span class='op'>(</span><span class='va'>r_opt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/optimize.html'>optimize</a></span><span class='op'>(</span><span class='va'>OPAG_r_min</span>,
          Pop_fit <span class='op'>=</span> <span class='va'>Pop_fit</span>,
          Age_fit <span class='op'>=</span> <span class='va'>Age_fit</span>,
@@ -248,7 +248,7 @@ given population vector and stationary standard.</p>
          nLx <span class='op'>=</span> <span class='va'>nLx</span>,
          Age_nLx <span class='op'>=</span> <span class='va'>Age_nLx</span>,
          interval <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>0.05</span>,<span class='fl'>.05</span><span class='op'>)</span><span class='op'>)</span><span class='op'>$</span><span class='va'>min</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 0.0008099916</div><div class='input'>
+</div><div class='output co'>#&gt; [1] 0.0006236568</div><div class='input'>
 <span class='va'>ai</span>  <span class='op'>&lt;-</span> <span class='fu'><a href='age2int.html'>age2int</a></span><span class='op'>(</span><span class='va'>Age_nLx</span><span class='op'>)</span>
 
 <span class='co'># Note the whole age range is being scaled to 1 here, but in practice</span>
