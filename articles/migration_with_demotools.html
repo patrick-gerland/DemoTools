@@ -114,7 +114,7 @@
       <h1 data-toc-skip>Migration models with DemoTools</h1>
                         <h4 class="author">José Manuel Aburto, Ilya Kashnitsky, Monica Alexander, Jorge Cimentada, Tim Riffe</h4>
             
-            <h4 class="date">2021-03-22</h4>
+            <h4 class="date">2021-03-23</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/timriffe/DemoTools/blob/master/vignettes/migration_with_demotools.Rmd"><code>vignettes/migration_with_demotools.Rmd</code></a></small>
       <div class="hidden name"><code>migration_with_demotools.Rmd</code></div>
@@ -248,7 +248,7 @@ m(x)= a_1 \exp{[ \alpha_1 x ]} + a_2 \exp{[ -\alpha_2 (x - \mu_2) - \exp{ [ -\la
   iter <span class="op">=</span> <span class="fl">2000</span>,
   control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>adapt_delta <span class="op">=</span> <span class="fl">0.8</span>, max_treedepth <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
-<p>The <code>mig_estimate_rc</code> function also allows for addition arguments that are related to the Stan model. In the example above, the values listed for <code>chains</code>, <code>iter</code>, <code>adapt_delta</code> and <code>max_treedepth</code> are the default values, so need have not been specified. However, depending on the context, it may make sense to increase the value of each of these components to ensure convergence. More details about these arguments can be found in the <code>R</code> help files for <code><a href="https://rdrr.io/pkg/rstan/man/stan.html">rstan::stan</a></code>, and also by referring to the <a href="https://mc-stan.org/users/documentation/">Stan documentation</a>.</p>
+<p>The <code>mig_estimate_rc</code> function also allows for addition arguments that are related to the Stan model. In the example above, the values listed for <code>chains</code>, <code>iter</code>, <code>adapt_delta</code> and <code>max_treedepth</code> are the default values, so need have not been specified. However, depending on the context, it may make sense to increase the value of each of these components to ensure convergence. More details about these arguments can be found in the <code>R</code> help files for <code><a href="https://mc-stan.org/rstan/reference/stan.html">rstan::stan</a></code>, and also by referring to the <a href="https://mc-stan.org/users/documentation/">Stan documentation</a>.</p>
 <p>The resulting <code>rc_res</code> object is shown below. The <code>pars_df</code> shows the median estimate and lower and upper bound of a 95% credible interval for the Rogers-Castro parameters. In this example, the working age peak was estimated to be at 25.3 years (95% CI: [23.5, 27.2]).</p>
 <p>The <code>fit_df</code> object in <code>rc_res</code> shows the data and estimated median <span class="math inline">\(m(x)\)</span> values at each age <span class="math inline">\(x\)</span>, along with the lower and upper bound of the 95% credible interval of the fits, and the squared difference between data and the median estimate.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
